@@ -1,7 +1,8 @@
 package main
 
 func main() {
-	card := deck{"Mehran", "Test", "Book", "Music", "Pen"}
-	card = append(card, "Book123")
-	card.print()
+	cards := newDeck()
+	hand, remainingCards := deal(cards, 5)
+	hand.print()
+	remainingCards.print()
 }
